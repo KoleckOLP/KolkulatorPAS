@@ -4,9 +4,9 @@ uses crt;
 var
         a, b, c, cmd: Integer;
 
-procedure PAKTC(display_text: string = 'press any key to continue');
+procedure PAKTC();
 begin
-        writeln(display_text);
+        writeln('press any key to continue');
         ReadKey;
         ClrScr;
 end;
