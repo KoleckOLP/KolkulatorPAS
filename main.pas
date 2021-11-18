@@ -4,7 +4,15 @@ uses crt;
 var
         a, b, c, cmd: Integer;
 
+procedure PAKTC(display_text: string = 'press any key to continue');
 begin
+        writeln(display_text);
+        ReadKey;
+        ClrScr;
+end;
+
+begin
+        ClrScr;
         while True do
         begin
                 writeln('Welcome to KolkulatorPAS (C)2021 koleq');
@@ -23,7 +31,9 @@ begin
                         write('Please write your second number: ');
                         readln(b);
                         c := a + b;
+                        ClrScr;
                         writeln('Result of ', a, ' + ', b, ' = ', c);
+                        PAKTC;
                 end
                 else if cmd = 2 then
                 begin
@@ -32,7 +42,9 @@ begin
                         write('Please write your second number: ');
                         readln(b);
                         c := a - b;
+                        ClrScr;
                         writeln('Result of ', a, ' - ', b, ' = ', c);
+                        PAKTC;
                 end
                 else
                         Exit;
